@@ -2,7 +2,10 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { createObserveModule } from '@nestjs/observe';
-import { SrcController } from './app/src/src.controller.js';
+import { MoviesModule } from './movies/movies.module.js';
+import { CinemasModule } from './cinemas/cinemas.module.js';
+import { AppController } from './app.controller.js';
+import { AppService } from './app.service.js';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
@@ -25,8 +28,11 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
         uri: configService.getOrThrow<string>('MONGODB_URI'),
       }),
     }),
+
+    MoviesModule,
+    CinemasModule,
   ],
-  controllers: [SrcController],
-  providers: [],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
