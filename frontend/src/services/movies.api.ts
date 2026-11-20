@@ -19,6 +19,14 @@ export const createMovie = async (
   return response.data;
 };
 
+export const updateMovie = async (
+  movieId: string,
+  movieData: Partial<CreateMoviePayload>,
+): Promise<Movie> => {
+  const response = await api.patch<Movie>(`/movies/${movieId}`, movieData);
+  return response.data;
+};
+
 export const getRewatchOrder = async (
   movieId: string,
 ): Promise<RewatchPlan> => {
@@ -28,4 +36,3 @@ export const getRewatchOrder = async (
 
   return response.data;
 };
-

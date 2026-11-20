@@ -38,9 +38,6 @@ export default function RewatchPlanPage() {
 
       const data = await getRewatchOrder(selectedMovie);
 
-      console.log("REWATCH API RESPONSE:", data);
-      console.log("REWATCH ORDER:", data.reWatchOrder);
-
       setPlan(data);
     } catch (error: any) {
       setError(
