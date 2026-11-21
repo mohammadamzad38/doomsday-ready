@@ -13,7 +13,8 @@
     "backend": {
       "root": "backend/",
       "framework": "nestjs",
-      "entrypoint": "src/main.ts"
+      "entrypoint": "src/main.ts",
+      "outputDirectory": "."
     }
   },
   "rewrites": [
