@@ -7,6 +7,7 @@ services:
       - "27018:27017"
     volumes:
       - mongo_data:/data/db
+
   backend:
     build: ./backend
     container_name: doomsday-ready-backend
@@ -14,10 +15,11 @@ services:
     ports:
       - "3000:3000"
     environment:
-      port: 3000
-      MONGODB_URI: mongodb://localhost:27017/doomsday_ready
+      PORT: 3000
+      MONGODB_URI: mongodb://mongodb:27017/doomsday_ready
     depends_on:
       - mongodb
+
   frontend:
     build: ./frontend
     container_name: doomsday-ready-frontend
@@ -28,5 +30,6 @@ services:
       VITE_API_URL: http://localhost:3000/api
     depends_on:
       - backend
+
 volumes:
   mongo_data:

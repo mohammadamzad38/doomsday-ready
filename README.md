@@ -28,14 +28,59 @@ erDiagram
 
 ## 3. Technology Stack
 
-- NestJS
-- TypeScript
-- MongoDB
-- Mongoose
-- React
-- Vite
-- Tailwind CSS
-- React Router
-- Axios
-- Docker
-- Docker Compose
+## Backend
+
+NestJS
+
+TypeScript
+
+MongoDB
+
+Mongoose
+
+Class Validator
+
+## -Frontend
+
+React
+
+TypeScript
+
+Vite
+
+Tailwind CSS
+
+React Router
+
+Axios
+
+## -DevOps
+
+Docker
+
+Docker Compose
+
+
+
+## Getting Started
+
+Run with Docker Compose
+
+Clone the repository:
+
+git clone https://github.com/mohammadamzad38/doomsday-ready.git
+cd doomsday-ready
+
+
+Application URLs:
+
+Frontend: http://localhost:5173
+
+Backend API: http://localhost:3000/api
+
+MongoDB: localhost:27018
+
+
+## Environment Variables
+
+See backend/.env.example and frontend/.env.example for the required environment configuration.

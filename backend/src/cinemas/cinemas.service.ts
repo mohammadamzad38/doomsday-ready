@@ -96,13 +96,20 @@ export class CinemasService {
       remainingSeats -= selectedSize;
     }
 
-    const bundleBreakdown = selectedBundles.reduce(
-      (result, size) => {
-        result[size] = (result[size] ?? 0) + 1;
-        return result;
-      },
-      {} as Record<number, number>,
-    );
+    const bundleBreakdown = Object.entries(
+      selectedBundles.reduce(
+        (result, size) => {
+          result[size] = (result[size] ?? 0) + 1;
+          return result;
+        },
+        {} as Record<number, number>,
+      ),
+    )
+      .map(([bundleSize, quantity]) => ({
+        bundleSize: Number(bundleSize),
+        quantity,
+      }))
+      .sort((a, b) => b.bundleSize - a.bundleSize);
 
     return {
       possible: true,
