@@ -131,7 +131,7 @@ export default function BookingPage() {
         <button
           onClick={handleBooking}
           disabled={loadingBooking || loadingCinemas || cinemas.length === 0}
-          className="rounded-lg bg-blue-600 px-6 py-3 font-medium text-white disabled:opacity-50"
+          className="rounded-lg cursor-pointer bg-blue-600 px-6 py-3 font-medium text-white disabled:opacity-50"
         >
           {loadingBooking ? "Calculating..." : "Get Booking Quote"}
         </button>

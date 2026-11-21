@@ -7,8 +7,6 @@ dist/
 **/dist/
 
 # Environment variables
-.env
-.env.*
 !.env.example
 
 # Logs
@@ -16,7 +14,6 @@ dist/
 npm-debug.log*
 
 # IDE
-.vscode/
 .idea/
 
 # OS
@@ -31,3 +28,5 @@ backend/dist/
 
 # Vite
 frontend/dist/
+.vercel
+config.bat

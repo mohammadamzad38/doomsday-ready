@@ -126,7 +126,7 @@ export default function MoviesPage() {
                 <button
                   type="button"
                   onClick={() => handleWatchedToggle(movie)}
-                  className={`rounded px-4 py-2 text-sm text-white ${
+                  className={`rounded  px-4 cursor-pointer py-2 text-sm text-white ${
                     movie.watched ? "bg-gray-600" : "bg-green-600"
                   }`}
                 >
@@ -155,7 +155,7 @@ export default function MoviesPage() {
                       type="button"
                       disabled={saving}
                       onClick={() => savePrerequisites(movie._id)}
-                      className="rounded bg-green-600 px-4 py-2 text-white disabled:opacity-50"
+                      className="rounded cursor-pointer bg-green-600 px-4 py-2 text-white disabled:opacity-50"
                     >
                       {saving ? "Saving..." : "Save Changes"}
                     </button>
@@ -164,7 +164,7 @@ export default function MoviesPage() {
                       type="button"
                       disabled={saving}
                       onClick={cancelEditing}
-                      className="rounded border px-4 py-2"
+                      className="rounded cursor-pointer border px-4 py-2"
                     >
                       Cancel
                     </button>
@@ -174,7 +174,7 @@ export default function MoviesPage() {
                 <button
                   type="button"
                   onClick={() => startEditing(movie)}
-                  className="mt-3 rounded bg-blue-600 px-4 py-2 text-white"
+                  className="mt-3 cursor-pointer rounded bg-blue-600 px-4 py-2 text-white"
                 >
                   Edit Prerequisites
                 </button>

@@ -82,7 +82,6 @@ export default function MovieForm({ movies, onMovieCreated }: MovieFormProps) {
         className="w-full rounded border p-3"
       />
 
-      {/* Prerequisite selection */}
       <div className="space-y-2">
         <label className="font-medium">Prerequisite Movies (Optional)</label>
 
@@ -113,7 +112,7 @@ export default function MovieForm({ movies, onMovieCreated }: MovieFormProps) {
       <button
         type="submit"
         disabled={loading}
-        className="rounded bg-blue-600 px-5 py-2 text-white disabled:opacity-50"
+        className="rounded cursor-pointer bg-blue-600 px-5 py-2 text-white disabled:opacity-50"
       >
         {loading ? "Creating..." : "Add Movie"}
       </button>

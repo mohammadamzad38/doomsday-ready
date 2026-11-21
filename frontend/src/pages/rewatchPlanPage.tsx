@@ -78,7 +78,7 @@ export default function RewatchPlanPage() {
         <button
           onClick={handleGeneratePlan}
           disabled={loading || !selectedMovie}
-          className="rounded-lg bg-blue-600 px-5 py-3 text-white disabled:opacity-50"
+          className="rounded-lg cursor-pointer bg-blue-600 px-5 py-3 text-white disabled:opacity-50"
         >
           {loading ? "Generating..." : "Generate Rewatch Plan"}
         </button>
